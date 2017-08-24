@@ -33,7 +33,7 @@
 			<version>${springframework.version}</version>
 		</dependency>
 
-		<!-- Mybatis数据库框架 The MyBatis SQL mapper framework makes it easier to use 
+		<!-- Mybatis数�?�库框架 The MyBatis SQL mapper framework makes it easier to use 
 			a relational database with object-oriented applications. MyBatis couples 
 			objects with stored procedures or SQL statements using a XML descriptor or 
 			annotations. Simplicity is the biggest advantage of the MyBatis data mapper 
@@ -109,7 +109,12 @@
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
-	
+	 <dependency>
+	  <groupId>javax.servlet</groupId>
+	  <artifactId>javax.servlet-api</artifactId>
+	  <version>3.1.0</version>
+	  <type>jar</type>
+	 </dependency>
 	</dependencies>
 	<build>
 		<finalName>UserDemo</finalName>
