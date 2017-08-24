@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- sql 映射文件 -->
+
+<!-- <mapper namespace="com.register.dao"> -->
+<mapper namespace="com.user.dao.mapper.UserMapper">
+	<resultMap id="userResult" type="User">
+		<result property="user_id" column="user_id" />
+		<result property="userName" column="username" />
+		<result property="passWord" column="password" />
+		<result property="sex" column="sex"
+			typeHandler="org.apache.ibatis.type.EnumOrdinalTypeHandler" />
+		<!--one to one -->
+		<association property="chemical" column="user_id" select="Chemical" />
+	</resultMap>
+
+	<sql id="userinfoTable">
+		userinfo
+	</sql>
+
+	<sql id="userinfoColumns">
+		username,
+		password,
+		sex
+	</sql>
+
+	<sql id="userinfoValues">
+		#{user.userName},
+		#{user.passWord},
+		#{user.sex,typeHandler=org.apache.ibatis.type.EnumOrdinalTypeHandler}
+	</sql>
+
+	<sql id="whereUserName">
+		<where>
+			username=#{username}
+		</where>
+	</sql>
+
+	<sql id="whereUserNameAndPassWord">
+		<where>
+			username=#{username}
+			and
+			password=#{password}
+		</where>
+	</sql>
+
+	<!-- 用户注册的判断 -->
+	<insert id="addUser" parameterType="User" keyColumn="user_id"
+		useGeneratedKeys="true" keyProperty="user.user_id">
+		<!-- <selectKey keyProperty="user_id" resultType="int" order="BEFORE"> -->
+		<!-- select if(max(user_id) is null,1,max(user_id) +2) as newId from userinfo -->
+		<!-- </selectKey> -->
+		<!-- insert into userinfo (username,password,sex) values(#{user.userName},#{user.passWord}, -->
+		<!-- #{user.sex,typeHandler=org.apache.ibatis.type.EnumOrdinalTypeHandler}); -->
+		insert into
+		<include refid="userinfoTable" />
+		(
+		<include refid="userinfoColumns" />
+		)
+		values
+		(
+		<include refid="userinfoValues" />
+		)
+	</insert>
+
+	<!-- <select id="userJudge" parameterType="String" resultType="com.register.model.User"> -->
+	<select id="userJudge" resultMap="userResult">
+		<!-- select * from userinfo where username=#{username}; -->
+		select
+		<include refid="userinfoColumns" />
+		from
+		<include refid="userinfoTable" />
+		<include refid="whereUserName" />
+	</select>
+
+	<!-- 用户登录的判断返回一个user给service处理 -->
+	<select id="userLogin" parameterType="map" resultType="com.register.model.User">
+		<!-- select * from userinfo where username=#{userName} and password=#{passWord}; -->
+		select
+		<include refid="userinfoColumns" />
+		from
+		<include refid="userinfoTable" />
+		<include refid="whereUserNameAndPassWord" />
+	</select>
+</mapper>

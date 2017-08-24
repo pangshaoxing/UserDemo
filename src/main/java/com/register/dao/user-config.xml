@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"    
+"http://mybatis.org/dtd/mybatis-3-config.dtd">   
+<configuration>
+	<settings>
+		<setting name="logImpl" value="LOG4J"/>
+	</settings>
+	<typeAliases>
+		<typeAlias alias="User" type="com.register.model.User"/>
+		<typeAlias alias="Chemical" type="com.register.model.Chemical"/>
+	</typeAliases>
+	
+	<typeHandlers>
+			<typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler"
+				javaType="com.register.model.Sex"/>
+		</typeHandlers>
+	
+	<mappers>
+		<mapper resource="com/register/dao/userDaoMapper.xml"/>
+	</mappers>
+	
+	
+</configuration>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- sql 映射文件 -->
+
+<mapper namespace="com.chemical.dao">
+
+	<resultMap type="com.register.model.Chemical" id="chemicalResultMap">
+		<id property="chemicalId" column="chemicalId"/>
+		<id property="chemicalName" column="chemicalName"/>
+		<id property="chemicalPrice" column="chemicalPrice"/>
+		<id property="chemicalSales" column="chemicalSales"/>
+		<id property="picturePath" column="picturePath"/>
+	</resultMap>
+
+	<insert id="addChemicalInfo" parameterType="map">
+		insert into chemical
+		(chemicalName,
+		chemicalPrice,
+		chemicalSales,
+		picturePath)
+		values
+		(#{chemicalName},
+	     #{chemicalPrice},
+		 #{chemicalSales},
+		 #{picturePath});
+	</insert>
+
+	<select id="selectChemicalInfo" parameterType="com.register.model.Chemical"
+		resultMap="chemicalResultMap">
+		select * from chemical where 1=1
+		<if test="chemicalName!=null and chemicalName!=''">
+		 and chemicalName=#{chemicalName}
+		</if>
+		<if test="chemicalPrice!=null">
+		 and chemicalPrice>=#{chemicalPrice}
+		</if>
+		order by chemicalPrice
+	</select>
+</mapper>
