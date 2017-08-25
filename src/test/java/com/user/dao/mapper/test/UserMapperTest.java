@@ -50,14 +50,14 @@ public class UserMapperTest extends TestCase {
         assertEquals(0,result);
     }
     
-    @Test
+    //@Test
     public void testJudgeUserMapper(){
         String username="123456";
         User user = userMapper.userJudge(username);
         assertNotNull(user);
     }
     
-    @Test
+    //@Test
     public void testLoginUserMapper(){
         String username = "123456";
         String password = "123456";
