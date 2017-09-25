@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.user.demo</groupId>
 	<artifactId>UserDemo</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>UserDemo Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	
@@ -157,6 +156,7 @@
 		<connection>scm:git:http://github.com/pangshaoxing/UserDemo</connection>
 		<developerConnection>scm:git:https://github.com/pangshaoxing/UserDemo</developerConnection>
 		<url>scm:git:https://github.com/pangshaoxing/tag</url>
-	</scm>
+	  <tag>HEAD</tag>
+  </scm>
 	
 </project>
