@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.user.demo</groupId>
 	<artifactId>UserDemo</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>UserDemo Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	
@@ -129,19 +128,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.0</version>
-				<configuration>
-					<tagBase>https://github.com/pangshaoxing/UserDemo.git</tagBase>
-				</configuration>
-			</plugin>
-			
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.2</version>
-				<configuration>
-					<tagBase>https://github.com/pangshaoxing/tags</tagBase>
-				</configuration>
+				<version>2.5.3</version>
 			</plugin>
 			
 			<plugin>
@@ -157,9 +144,10 @@
 	</build>
 	
 	<scm>
-		<connection>scm:git:http://github.com/pangshaoxing/UserDemo</connection>
-		<developerConnection>scm:git:https://github.com/pangshaoxing/UserDemo</developerConnection>
-		<url>scm:git:https://github.com/pangshaoxing/tag</url>
+		<connection>scm:git:git@github.com:pangshaoxing/UserDemo.git</connection>
+		<developerConnection>scm:git:git@github.com:pangshaoxing/UserDemo.git</developerConnection>
+		<url>https://github.com/pangshaoxing/UserDemo</url>
+		<tag>HEAD</tag>
 	</scm>
 	
 </project>
