@@ -3,7 +3,7 @@
 	<groupId>com.user.demo</groupId>
 	<artifactId>UserDemo</artifactId>
 	<packaging>war</packaging>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<name>UserDemo Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	
@@ -140,16 +140,16 @@
           			<xmlPath>${basedir}/src/changes/changes.xml</xmlPath>
         		</configuration>
 			</plugin>
-			
+
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-changelog-plugin</artifactId>
-				<version>2.2</version>
-				<configuration>
-					<type>range</type>
-					<range>120</range>
-				</configuration>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-changes-plugin</artifactId>
+		        <version>2.12.1</version>
+		        <configuration>
+          			<xmlPath>${basedir}/src/changes.xml</xmlPath>
+        		</configuration>
 			</plugin>
+			
 		</plugins>
 	</build>
 	
