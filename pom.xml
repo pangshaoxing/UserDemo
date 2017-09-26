@@ -3,7 +3,7 @@
 	<groupId>com.user.demo</groupId>
 	<artifactId>UserDemo</artifactId>
 	<packaging>war</packaging>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<name>UserDemo Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	
@@ -147,7 +147,7 @@
 		<connection>scm:git:git@github.com:pangshaoxing/UserDemo.git</connection>
 		<developerConnection>scm:git:git@github.com:pangshaoxing/UserDemo.git</developerConnection>
 		<url>https://github.com/pangshaoxing/UserDemo</url>
-		<tag>HEAD</tag>
+		<tag>UserDemo-1.0.1</tag>
 	</scm>
 	
 </project>
