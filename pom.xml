@@ -128,17 +128,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.2.1</version>
-			</plugin>
-			
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-changelog-plugin</artifactId>
-				<version>2.2</version>
-				<configuration>
-					<type>range</type>
-					<range>120</range>
-				</configuration>
+				<version>2.5.3</version>
 			</plugin>
 			
 			<plugin>
@@ -146,7 +136,7 @@
 		        <artifactId>maven-changes-plugin</artifactId>
 		        <version>2.12.1</version>
 		        <configuration>
-          			<xmlPath>${basedir}/src/site/changes.xml</xmlPath>
+          			<xmlPath>${basedir}/src/changes.xml</xmlPath>
         		</configuration>
 			</plugin>
 			
