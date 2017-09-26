@@ -18,7 +18,6 @@ import org.mockito.junit.MockitoJUnitRunner;
  * 
  * @Shaoxing Pang
  */
-//add test
 @RunWith(MockitoJUnitRunner.class)
 public class UserMapperTest extends TestCase {
     
@@ -27,7 +26,7 @@ public class UserMapperTest extends TestCase {
     public UserMapperTest() {
     }
     
-    //add test changfe
+    //add test changes
     @BeforeClass
     public static void setUpClass() {
 
