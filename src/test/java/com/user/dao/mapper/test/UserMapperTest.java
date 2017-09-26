@@ -26,6 +26,7 @@ public class UserMapperTest extends TestCase {
     public UserMapperTest() {
     }
     
+    //add test changes
     @BeforeClass
     public static void setUpClass() {
 
