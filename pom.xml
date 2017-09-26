@@ -3,7 +3,7 @@
 	<groupId>com.user.demo</groupId>
 	<artifactId>UserDemo</artifactId>
 	<packaging>war</packaging>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>2.0.1-SNAPSHOT</version>
 	<name>UserDemo Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	
